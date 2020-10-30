@@ -274,8 +274,7 @@ def nine(inputString, char):
 	if char in new_input:
 		return new_input.find(char) +1
 	else:	
-		return -1	
-print(nine("This is a Sentence","T"))		
+		return -1			
 
 	# <QUESTION 10>
 
@@ -295,4 +294,10 @@ print(nine("This is a Sentence","T"))
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def ten(string, int, char):
-	return False
+	lowercase = string.lower()
+	check = lowercase.find(char) +1
+	if check == int:
+		return True
+	else:	
+		return False
+print(ten("on-premise",3,"-"))		
