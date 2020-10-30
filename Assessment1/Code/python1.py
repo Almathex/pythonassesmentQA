@@ -71,7 +71,15 @@ def one(input1, input2):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
-	return ""
+	string = "bert"
+	lowercase = input.lower()
+	x = lowercase.split(string)
+	if lowercase.count(string) != 2:
+		return ""
+	else:
+		x1 = x[1]
+		return x1
+print(two("xxBertisonamadonebertxx"))		
 
 
 
