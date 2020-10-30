@@ -139,17 +139,18 @@ def three(arg1):
 
 def four(arg1):
 	number = arg1.split()
-	_max = 0
+	high = 0
 	for index in number:
 		str1 = index
 		list1 = []
 		list1[:0] = str1
 		total = 0
-		for i in list1:
-			total += int(i)
-		if total > _max:
-			_max = total
-			return _max	
+		for index2 in list1:
+			total += int(index2)
+	if total > high:
+		high = total
+		return high
+print(four("555 72 86 45 10"))	
 
 	# <QUESTION 5>
 
@@ -299,5 +300,4 @@ def ten(string, int, char):
 	if check == int:
 		return True
 	else:	
-		return False
-print(ten("on-premise",3,"-"))		
+		return False		
