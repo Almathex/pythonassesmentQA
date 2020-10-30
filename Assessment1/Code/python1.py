@@ -78,8 +78,7 @@ def two(input):
 		return ""
 	else:
 		x1 = x[1]
-		return x1
-print(two("xxBertisonamadonebertxx"))		
+		return x1		
 
 
 
@@ -104,7 +103,16 @@ print(two("xxBertisonamadonebertxx"))
 	# No Hints for this question
 
 def three(arg1):
-	return "null"
+	by_3 = arg1 % 3
+	by_5 = arg1 % 5
+	if by_3 == 0 and by_5 == 0:
+		return "fizzbuzz"
+	elif by_3 == 0:
+		return "fizz" 
+	elif by_5 == 0:
+		return "buzz" 
+	else:		
+		return "null"		
 
 
 	# <QUESTION 4>
