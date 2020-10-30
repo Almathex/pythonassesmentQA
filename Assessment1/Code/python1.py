@@ -138,7 +138,18 @@ def three(arg1):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
-	return 0
+	number = arg1.split()
+	_max = 0
+	for index in number:
+		str1 = index
+		list1 = []
+		list1[:0] = str1
+		total = 0
+		for i in list1:
+			total += int(i)
+		if total > _max:
+			_max = total
+			return _max	
 
 	# <QUESTION 5>
 
@@ -187,7 +198,16 @@ def five(input):
 
 
 def six(input):
-    return False
+	word = "ie"
+	word2 = "cie"
+	word3 = "cei"
+	if word in input and not word2 in input:
+		return True
+	elif word3 in input:
+		return True
+	else: 
+		return False			
+
 
 	# <QUESTION 7>
 
@@ -204,7 +224,12 @@ def six(input):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    return 0
+    number_of_vowels = 0
+    the_vowels = ["a", "e", "i", "o", "u"]
+    for letter in input.lower():
+        if letter in the_vowels:
+            number_of_vowels += 1
+    return number_of_vowels	
 
 	# <QUESTION 8>
 
@@ -222,7 +247,9 @@ def seven(input):
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def eight(input):
-	return 1
+    if input == 0:
+        return 1
+    return input * eight(input - 1)
 
 	# <QUESTION 9>
 
@@ -243,7 +270,12 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-	return -1
+	new_input = inputString.replace(" ", "")
+	if char in new_input:
+		return new_input.find(char) +1
+	else:	
+		return -1	
+print(nine("This is a Sentence","T"))		
 
 	# <QUESTION 10>
 
