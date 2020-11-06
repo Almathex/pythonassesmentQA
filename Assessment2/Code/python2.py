@@ -111,7 +111,7 @@ def four(input1, input2):
 	for i in range(len(input1)):
 		output += input1[i] + input2[i]
 	return output
-print(four("Dog", "Cat"))
+
 	# <QUESTION 5>
 
 	# Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
@@ -126,8 +126,17 @@ print(four("Dog", "Cat"))
 	# There is a module which can be used to generate random numbers, this module is called random.
 	# The random module contains a function called randint.
 
+from random import randint
 def five():
-    return []
+	output = list()
+	count = 0
+	while count < 5:
+		random = randint(100,200)
+		if random % 2 ==0:
+			output.append(random)
+			count += 1
+	return output
+print(five())	
 
 	# <QUESTION 6>
 
