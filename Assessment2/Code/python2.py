@@ -136,7 +136,6 @@ def five():
 			output.append(random)
 			count += 1
 	return output
-print(five())	
 
 	# <QUESTION 6>
 
@@ -155,8 +154,11 @@ print(five())
 	# There are no hints for this question.
     
 def six(input):
-	return False
-
+	lower = input.lower()
+	if lower.endswith('py'):
+		return True
+	else:	
+		return False
 	# <QUESTION 7>
 
     # Given three ints, a b c, one of them is small, one is medium and one is large. 
@@ -179,7 +181,15 @@ def six(input):
 	# Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-	return False
+	lst = [a, b, c]
+	lst.sort()
+	diff_s_m = (lst[1] - lst[0])
+	diff_m_b = (lst[2] - lst[1])
+	if diff_s_m == diff_m_b:
+		return True
+	else:	
+		return False
+print(seven(4, 6, 2))		
 
 	# <QUESTION 8>
 
