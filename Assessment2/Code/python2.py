@@ -188,8 +188,7 @@ def seven(a, b, c):
 	if diff_s_m == diff_m_b:
 		return True
 	else:	
-		return False
-print(seven(4, 6, 2))		
+		return False		
 
 	# <QUESTION 8>
 
@@ -207,8 +206,11 @@ print(seven(4, 6, 2))
     # Use the cli to access the documentation help(str.replace)
 
 def eight(input,  a):
-	return ""
-
+	mid = int(len(input)/2)
+	dif = int((a-1)/2)
+	new = input[:mid-dif]+input[mid+dif+1:]
+	return new	
+print(eight("chocolate", 3))
 	# <QUESTION 9>
 
     # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
