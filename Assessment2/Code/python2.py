@@ -238,7 +238,6 @@ def nine(string1, string2):
 				return False
 		return True
 	return False						
-print(nine("cat", "tiredest"))
 	# <QUESTION 10>
 
     # Write a function which takes 2 integers greater than 0, X,Y as input and generates a 2-dimensional array. 
@@ -255,4 +254,11 @@ print(nine("cat", "tiredest"))
 	# Think about nesting for loops.
 
 def ten(X,Y):
-	return []
+	array = list()
+	for i in range(Y):
+		temp = []
+		for j in range(X):
+			temp.append(i*j)
+		array.append(temp)	
+	return array
+print(ten(3,2))	
