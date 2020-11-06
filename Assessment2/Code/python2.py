@@ -79,7 +79,6 @@ def three(a):
 	d = c + int(str(b)*3)
 	e = d + int(str(b)*4)
 	return e
-print(three(5))	
 
 	# <QUESTION 4>
 
@@ -108,8 +107,11 @@ print(three(5))
 	# How would you seperate a string into characters?
 
 def four(input1, input2):
-	return ""
-
+	output = ''
+	for i in range(len(input1)):
+		output += input1[i] + input2[i]
+	return output
+print(four("Dog", "Cat"))
 	# <QUESTION 5>
 
 	# Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
