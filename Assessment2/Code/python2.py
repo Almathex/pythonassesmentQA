@@ -210,7 +210,6 @@ def eight(input,  a):
 	dif = int((a-1)/2)
 	new = input[:mid-dif]+input[mid+dif+1:]
 	return new	
-print(eight("chocolate", 3))
 	# <QUESTION 9>
 
     # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
@@ -226,8 +225,20 @@ print(eight("chocolate", 3))
 	# There are no hints for this question.
 
 def nine(string1, string2):
-    return False
-
+	len1 = len(string1)
+	len2 = len(string2)
+	if len1 > len2:
+		for index in range(len2):
+			if string1.count(string2[index]) < string2.count(string2[index]):
+				return False
+		return True
+	else:
+		for index in range(len1):
+			if string2.count(string1[index]) < string1.count(string1[index]):
+				return False
+		return True
+	return False						
+print(nine("cat", "tiredest"))
 	# <QUESTION 10>
 
     # Write a function which takes 2 integers greater than 0, X,Y as input and generates a 2-dimensional array. 
